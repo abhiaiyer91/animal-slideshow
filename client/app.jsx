@@ -25,9 +25,9 @@ AnimalSlideShow = {
  * Rendering Function
  */
 var step = () => { // onEnterFrame
-  var superCoolLion = document.getElementById('super-cool-lion');
+  var slideshow = document.getElementById('animal-slideshow');
   Meteor.startup(() => {
-    React.render(<SuperCoolLion />, superCoolLion); // trigger a repaint
+    React.render(<Animal />, slideshow); // trigger a repaint
   });
   window.requestAnimationFrame(step); // keep the clock ticking
 

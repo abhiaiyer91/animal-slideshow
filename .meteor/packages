@@ -20,3 +20,11 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 react
 less
+meteorhacks:npm
+cosmos:browserify
+
+
+npm-container
+twbs:bootstrap
+underscore
+random

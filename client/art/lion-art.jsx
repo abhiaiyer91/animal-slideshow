@@ -1,4 +1,4 @@
-SVGArt = class SVGArt extends React.Component {
+LionArt = class LionArt extends React.Component {
   render() {
     return (
       <div>

@@ -1,4 +1,3 @@
-AnimalSlideShow = window.AnimalSlideShow || {};
 /**
  * Create a random range between numbers
  * @param min
@@ -32,9 +31,19 @@ Polygon = class Polygon extends React.Component {
       movability: new Point(randomRange(0.86, 1), randomRange(0.86, 1)), // how "movable" each polygon is
       polarity: new Point(Math.random() <= .5, Math.random() <= .5) // mouse polarity (which way to go when the mouse is moved)
     };
+    this.mixins = [ReactMeteorData]
+  }
+
+  getMeteorData() {
+    var reactiveChange = Session.get('reactiveChange');
+    return {
+      reactiveChange: reactiveChange
+    }
   }
 
   render() {
+    //this.data.reactiveChange;
+    //console.log(this.data);
     // some otherwise unnecessary pointer variables to make things more legible
     var destColor = this.state.origFill;
     var colorVelocity = this.state.colorVelocity;
