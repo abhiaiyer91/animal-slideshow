@@ -1,7 +1,7 @@
 LionArt = class LionArt extends React.Component {
   render() {
     return (
-      <div id={this.props.idProp}>
+      <div>
         <svg version="1.1" id="lion" x="0px" y="0px"
              viewBox="0 0 800 800" enable-background="new 0 0 800 800">
           <g>
