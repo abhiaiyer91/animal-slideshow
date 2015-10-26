@@ -1,3 +1,4 @@
+AnimalSlideShow = window.AnimalSlideShow || {};
 /**
  * Create a random range between numbers
  * @param min
@@ -12,8 +13,8 @@ Meteor.setInterval(() => { // wait 4 seconds then start listening to mouse move
   document.body.onmousemove = function (e) {
     var mousePos = new Point(e.screenX, e.screenY); // current mouse position
     // calculate moues velocity based on distance between frames, breakability, and window size
-    AnimalSlideshow.mouseVelocity = new Point((mousePos.x - AnimalSlideshow.lastMousePos.x) / (window.innerWidth * (1 - AnimalSlideshow.breakability)), (mousePos.y - AnimalSlideshow.lastMousePos.y) / (window.innerHeight * (1 - AnimalSlideshow.breakability)));
-    AnimalSlideshow.lastMousePos = mousePos;
+    AnimalSlideShow.mouseVelocity = new Point((mousePos.x - AnimalSlideShow.lastMousePos.x) / (window.innerWidth * (1 - AnimalSlideShow.breakability)), (mousePos.y - AnimalSlideShow.lastMousePos.y) / (window.innerHeight * (1 - AnimalSlideShow.breakability)));
+    AnimalSlideShow.lastMousePos = mousePos;
   }
 }, 4000);
 
